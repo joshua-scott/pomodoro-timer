@@ -1,2 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Encode+Sans+Expanded");
+body {
+  font-size: 2rem;
+  font-family: 'Encode Sans Expanded', sans-serif;
+  background: #364e66;
+  color: #fbfafa;
+  padding-top: 4em; }
+
+.wrapper {
+  width: 95%;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: center; }
+
+.settings {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 auto; }
+  .settings h3 {
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-bottom: 0.2em; }
+  .settings p {
+    display: inline-block;
+    font-size: 2em;
+    margin: 0.1em; }
+  .settings button {
+    background: none;
+    border: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    font-size: 1.2em;
+    color: #fbfafa;
+    -webkit-transform: translateY(-8px);
+            transform: translateY(-8px); }
+
+.countdown {
+  border: 2px solid #eb4a3e;
+  border-radius: 1em;
+  margin: 2em auto;
+  width: 70%; }
 
 /*# sourceMappingURL=style.css.map */
