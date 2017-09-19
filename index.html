@@ -11,21 +11,23 @@
 
 <body>
   <div class="wrapper">
+    
     <div class="settings">
 
       <div class="break">
         <h3>Break Length</h3>
-        <button class="minus">-</button>
-        <p class="time">0</p>
-        <button class="plus">+</button>
+        <button data-change="-1" data-which="break">-</button>
+        <p class="time" contenteditable="true">5</p>
+        <button data-change="+1" data-which="break">+</button>
       </div>
 
       <div class="session">
         <h3>Session Length</h3>
-        <button class="minus">-</button>
-        <p class="time">0</p>
-        <button class="plus">+</button>
+        <button data-change="-1" data-which="session">-</button>
+        <p class="time" contenteditable="true">25</p>
+        <button data-change="+1" data-which="session">+</button>
       </div>
+
     </div>
 
     <div class="countdown">
