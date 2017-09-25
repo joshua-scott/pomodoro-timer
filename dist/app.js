@@ -7,6 +7,10 @@ const times = {
   break: document.querySelector('.break .time'),
   session: document.querySelector('.session .time')
 };
+const timer = {
+  mode: document.querySelector('.timer .current'),
+  countdown: document.querySelector('.timer .countdown')
+};
 
 function setTime(e) {
   e.preventDefault();
