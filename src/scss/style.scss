@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Encode+Sans+Expanded');
 
-$bluegray: #364e66;
+$blue: #364e66;
 $red: #eb4a3e;
 $green: #00ff00;
 $grey: #a2aaae;
@@ -9,7 +9,7 @@ $white: #fafafa;
 body {
   font-size: 2rem;
   font-family: 'Encode Sans Expanded', sans-serif;
-  background: $bluegray;
+  background: $blue;
   color: $white;
   padding-top: 4em;
 }
@@ -58,7 +58,7 @@ body {
 }
 
 .timer {
-  border: 2px solid $red;
+  border: 1px solid $grey;
   border-radius: 100%;
   margin: 50px auto;
   width: 300px;
@@ -69,5 +69,8 @@ body {
   cursor: pointer;
   &.breaktime {
     border: 2px solid $green;
+  }
+  &.worktime {
+    border: 2px solid $red;
   }
 }

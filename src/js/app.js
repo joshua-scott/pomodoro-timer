@@ -1,5 +1,5 @@
 const buttons = document.querySelectorAll('[data-change]');
-let isBreak = false;
+let isBreak = true;
 let countdown;
 
 const times = {
@@ -25,7 +25,17 @@ function timer(seconds) {
   clearInterval(countdown); // Clear any existing timers
   const startTime = Date.now();
   const endTime = startTime + seconds * 1000;
-  mainDisplay.mode.textContent = isBreak ? 'Break' : 'Work';  
+
+  if (isBreak) {
+    mainDisplay.mode.textContent = 'Break';
+    mainDisplay.main.classList.remove('worktime');
+    mainDisplay.main.classList.add('breaktime');
+  } else {
+    mainDisplay.mode.textContent = 'Work';
+    mainDisplay.main.classList.remove('breaktime');
+    mainDisplay.main.classList.add('worktime');
+  }
+
   displayTimeLeft(seconds); // We call this now to avoid having to wait a second for setInterval
 
   // Every second, either switch mode or show the time left
@@ -34,7 +44,6 @@ function timer(seconds) {
     if (secondsLeft < 0) {
       isBreak = !isBreak;
       const newTime = isBreak ? times.break.textContent * 60 : times.work.textContent * 60;
-      mainDisplay.main.classList.toggle('breaktime');
       timer(newTime);
     } else {
       displayTimeLeft(secondsLeft);
@@ -67,5 +76,7 @@ function toTwoDigits(num) {
 
 buttons.forEach(btn => btn.addEventListener('click', setTime));
 mainDisplay.main.addEventListener('click', () => {
-  timer(times.work.innerHTML * 60);
+  isBreak = !isBreak;
+  const newTime = isBreak ? times.break.textContent * 60 : times.work.textContent * 60;
+  timer(newTime);
 });
