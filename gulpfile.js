@@ -13,7 +13,7 @@ const bsOptions = {
 };
 
 const sassOptions = {
-  // outputStyle: 'compressed'
+  outputStyle: 'compressed'
 };
 
 gulp.task('scripts', () => {

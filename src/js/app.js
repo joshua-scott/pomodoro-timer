@@ -1,5 +1,3 @@
-'use strict';
-
 const buttons = document.querySelectorAll('[data-change]');
 let isBreak = false;
 let countdown;
@@ -27,7 +25,7 @@ function timer(seconds) {
   clearInterval(countdown); // Clear any existing timers
   const startTime = Date.now();
   const endTime = startTime + seconds * 1000;
-  mainDisplay.mode.textContent = isBreak ? 'Break' : 'Work';
+  mainDisplay.mode.textContent = isBreak ? 'Break' : 'Work';  
   displayTimeLeft(seconds); // We call this now to avoid having to wait a second for setInterval
 
   // Every second, either switch mode or show the time left
@@ -52,7 +50,7 @@ function displayTimeLeft(secs) {
   secs = secs % 60;
 
   let display = '';
-
+  
   if (hours > 0) {
     display = `${hours}:${toTwoDigits(mins)}:${toTwoDigits(secs)}`;
   } else {
@@ -71,4 +69,3 @@ buttons.forEach(btn => btn.addEventListener('click', setTime));
 mainDisplay.main.addEventListener('click', () => {
   timer(times.work.innerHTML * 60);
 });
-//# sourceMappingURL=app.js.map
