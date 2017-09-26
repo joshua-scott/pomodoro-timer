@@ -69,7 +69,7 @@ function displayTimeLeft(secs) {
   }
 
   mainDisplay.countdown.textContent = display;
-  document.title = display;
+  document.title = `${display} (${isBreak ? 'Break' : 'Work'})`;
 }
 
 function toTwoDigits(num) {
